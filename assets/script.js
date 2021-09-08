@@ -17,13 +17,11 @@ var passwordText = document.querySelector("#password");
 
 
 function writePassword() {
-  var thePassword = [];
-
+  
   var chosenCharacters = [];
 
   var passwordLength = prompt("How long?"); 
   if(passwordLength < 8 || passwordLength > 128 === true) {
-    return alert("try again");
   }
   
   var useLowerCase = confirm("lowercase?");
