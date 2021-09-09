@@ -52,18 +52,17 @@ function writePassword() {
      getPassword.push(currentChar)
     }
   
-    passwordText.value = getPassword
+    passwordText.value = getPassword.join(' ');
     //var password = getPassword
     return getPassword;
     //console.log(getPassword);
-  }
-    
-  generatePassword();
+  } 
   
-    
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 //var password = generatePassword()
 //passwordText.value = password
+ //removeComma();
+  //generatePassword();
+   //console.log(getPassword);
