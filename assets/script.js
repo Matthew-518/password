@@ -8,11 +8,6 @@ var SpecialChar =  ['+','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']',
 var passwordText = document.querySelector("#password");
 var generateBtn = document.querySelector("#generate");
  
-//var generatePassword = function() {
-  //var password = "";
-  //return getPassword;
-//}
-
 function writePassword() {
     
   var getPassword = [];
@@ -39,20 +34,20 @@ function writePassword() {
     return null;
   }
  
-  var useLowerCase = confirm("lowercase?");
+  var useLowerCase = confirm("Would you like to include lowercase letters in your password?");
   if (useLowerCase === true) {
       chosenCharacters = chosenCharacters.concat(lowerCase);
   }
 
-  var useUpperCase = confirm("uppercase?");
+  var useUpperCase = confirm("Would you like to include uppercase letters in your password?");
     if (useUpperCase === true) {
     chosenCharacters = chosenCharacters.concat(upperCase);
   }
-  var useNumeric = confirm("numeric?");
+  var useNumeric = confirm("Would you like to include numeric values in your password?");
     if (useNumeric === true) {
     chosenCharacters = chosenCharacters.concat(numeric);
     }
-  var useSpecialChar = confirm("special character?");
+  var useSpecialChar = confirm("Would you like to include special characters in your password?");
     if (useSpecialChar === true) {
       chosenCharacters = chosenCharacters.concat(SpecialChar);
     }
@@ -73,6 +68,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//TRASH PILE OF EXPERIMENTED CODE
+
 //var password = generatePassword()
 //passwordText.value = password
  //removeComma();
@@ -83,3 +80,8 @@ generateBtn.addEventListener("click", writePassword);
   //if(passwordLength < 8 || passwordLength > 128) {
     //return alert("try again");
   //}
+
+  //var generatePassword = function() {
+  //var password = "";
+  //return getPassword;
+//}
